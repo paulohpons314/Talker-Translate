@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Talker Translate",
+  "description": "Aplicativo de tradução e formatação de texto em tempo real com IA Gemini, suporte a documentos, OCR e atalhos de teclado.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
