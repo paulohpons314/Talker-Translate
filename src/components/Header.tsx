@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  Sparkles, 
-  FileText, 
-  Globe, 
-  Cloud, 
+import {
+  Sparkles,
+  FileText,
+  Globe,
+  Cloud,
   Image as ImageIcon,
-  Languages,
   Zap,
   Keyboard
 } from 'lucide-react';
+import { J6Icon } from './J6Icon';
 
 interface HeaderProps {
   onOpenFileModal: () => void;
@@ -38,12 +38,13 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Brand & Title */}
       <div className="flex items-center gap-3">
-        <div 
+        <div
           onClick={onResetToText}
-          className="cursor-pointer group relative flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.04] border border-white/15 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-white/30"
+          title="J6 — voltar ao modo texto"
+          className="cursor-pointer group relative flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.04] border border-white/15 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-white/30 overflow-hidden"
         >
-          <Languages className="w-5 h-5 text-[#D3E2F1]/70 transition-transform duration-300 group-hover:rotate-12 group-hover:text-[#D3E2F1]" />
-          <span className="absolute inset-0 rounded-xl bg-white/5 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
+          <J6Icon variant="header" size={40} active={isProcessing} />
+          <span className="absolute inset-0 rounded-xl bg-white/5 blur-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
         </div>
 
         <div>
